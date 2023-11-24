@@ -4,7 +4,7 @@
 
 # include <iostream>
 # include <vector>
-#include <math.h>
+# include <math.h>
 using namespace std;
 
 void lokasi(int n, vector<int>& a, vector<int>& b){
