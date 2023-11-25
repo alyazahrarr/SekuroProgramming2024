@@ -48,8 +48,10 @@ public:
     void printPoints() {
         // print nilai member data dengan format
         // (x1, y1) = ( , )
+        std::cout << "(x1, y1) = ";
         std::cout << "(" << x1 << ", " << y1 << ")" << std::endl;
         // (x2, y2) = ( , )
+        std::cout << "(x2, y2) = ";
         std::cout << "(" << x2 << ", " << y2 << ")" << std::endl;
     } 
 };
