@@ -114,11 +114,11 @@ int main(){
         int v, t, alpha;
         
         cout << "============================================" << '\n' << "Pergerakan Drone dengan Kecepatan dan Waktu" << '\n';;
-        cout << "1   Pergerakan" << '\n' << "2   Cek Lokasi" << '\n' << "3   Keluar" << endl;
+        cout << "1   Pergerakan" << '\n' << "2   Undo" << '\n' << "3   Redo" << '\n' << "4   Cek Lokasi" << '\n' << "5   Keluar" << endl;
         cout << "Ingin melakukan apa? ";
         cin >> ingin;
         // selama belum pilih opsi exit
-        while (!(ingin == '3')){
+        while (!(ingin == '5')){
             if (ingin == '1'){ // pergerakan
                 cout << "Kecepatan drone? ";
                 cin >> v;
@@ -128,7 +128,19 @@ int main(){
                 cin >> alpha;
                 gerak_2(langkah, v, t, alpha, historix_2, historiy_2);
                 langkah = langkah + 1;}
-            if (ingin == '2'){ // cek lokasi
+            if (ingin == '2'){ // undo
+                if (!(langkah == 0)){
+                langkah = langkah - 1;
+                cout << "Undo berhasil!" << endl;}
+                else 
+                cout << "Undo tidak bisa dilakukan..." << endl;}
+            if (ingin == '3'){ // redo
+                if (!(langkah == historix_2.size() - 1)){
+                langkah = langkah + 1;
+                cout << "Redo berhasil!" << endl;}
+                else 
+                cout << "Redo tidak bisa dilakukan..." << endl;}
+            if (ingin == '4'){ // cek lokasi
                 cout << "Lokasi saat ini: ";
                 lokasi_2(langkah, historix_2, historiy_2);}   
             cout << "Ingin melakukan apa? ";
