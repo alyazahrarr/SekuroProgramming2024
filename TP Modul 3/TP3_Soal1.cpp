@@ -31,7 +31,7 @@ public:
     }
     float y_intercept() {
         // hitunglah nilai y ketika x = 0
-        int c = y1 - ((y2 - y1) / (x2 - x1))*x1;
+        int c = y1 - gradient()*x1;
         return c;
     }
     void operator + (float a) {
