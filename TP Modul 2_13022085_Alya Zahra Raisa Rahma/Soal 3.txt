@@ -1,0 +1,50 @@
+// TP Modul 2 Programming
+// Nama : Alya Zahra Raisa Rahma
+// NIM  : 13022085
+
+// Soal 3 : Pointer
+
+Diketahui:
+a = 10
+b = 20
+pa = &a
+pb = &b
+ppa = &pa
+ppb = &pb
+
+address a = 0x111111
+address b = 0x222222
+address pa = 0x333333
+address pb = 0x444444
+
+Keluaran dari program tersebut adalah sebagai berikut:
+1) cout << a << endl;
+   ini akan menampilkan nilai a, yaitu 10.
+2) cout << &a << endl;
+   ini akan menampilkan address dari a, yaitu 0x111111.
+3) cout << pb << endl;
+   pb menyimpan address dari b, yaitu 0x222222.
+4) cout << ppa << endl;
+   ppa menyimpan address dari pa, yaitu 0x333333.
+5) cout << *pa << endl;
+   menampilkan nilai pada address yang disimpan oleh pa.
+   address yang disimpan oleh pa adalah 0x111111, dan nilai yang tersimpan dalam address tersebut adalah 10.
+6) cout << *ppb << endl;
+   menampilkan nilai pada address yang disimpan oleh ppb.
+   address yang disimpan oleh ppb adalah 0x444444, dan nilai yang tersimpan dalam address tersebut adalah 0x222222.
+7) cout << **ppa << endl;
+   menampilkan hasil dengan langkah di bawah:
+   **(ppa) = **(0x333333)
+           = *0x111111
+           = 10
+8) cout << *pb * **ppb <<endl;
+   dapat dilihat bahwa tulisan di atas merupakan perkalian dari dua buah nilai yaitu (*pb) dan (**ppb)
+   menentukan nilai *pb:
+   *pb = *0x222222
+       = 20
+   menentukan nilai **ppb:
+   **ppb = **(0x444444)
+         = *0x222222
+         = 20
+    maka, (*pb) * (**ppb) = 20 * 20 = 400
+    sehingga output dari baris tersebut adalah 400. 
